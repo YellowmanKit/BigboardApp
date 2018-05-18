@@ -1,0 +1,179 @@
+
+
+.ModalMessage{
+
+  min-height: 150px;
+  min-width: 600px;
+  max-height: 150px;
+  max-width: 600px;
+  margin-top: 70px;
+  line-height: 1.25;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: adobestdb;
+  font-size: 3.5em;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  font-stretch: condensed;
+
+}
+
+.ConfirmButtonsArea{
+
+  min-height: 150px;
+  min-width: 625px;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.dialogBox {
+  min-height: 400px;
+  min-width: 675px;
+  max-height: 400px;
+  max-width: 675px;
+  background: url('../Images/bg.png');
+  background-size: contain;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+}
+
+.cancelButton {
+  height: 85px;
+  width: 250px;
+
+  background: url('../Images/delete_cancel_btn.png');
+  background-size: cover;
+  border: none;
+
+  margin-left: 50px;
+
+  cursor: pointer;
+}
+
+.confirmButton {
+  height: 85px;
+  width: 250px;
+
+  background: url('../Images/delete_confirm_btn.png');
+  background-size: cover;
+  border: none;
+
+  cursor: pointer;
+}
+
+.uploadButton {
+  min-height: 150px;
+  min-width: 650px;
+
+  margin-left: 50px;
+
+  background: url('../Images/Content_save_btn.png');
+  background-size: contain;
+  border: none;
+
+  cursor: pointer;
+}
+
+.folderButton {
+  height: 155px;
+  width: 175px;
+
+  background: url('../Images/icon_file_btn.png') no-repeat;
+  background-size: contain;
+  border: none;
+
+  cursor: pointer;
+}
+
+.addContentButton {
+  min-height: 150px;
+  min-width: 650px;
+
+  background: url('../Images/Content_add_btn.png') no-repeat;
+  background-size: contain;
+  border: none;
+
+  cursor: pointer;
+}
+
+.ImageRow {
+  width: 100%;
+  height: 250px;
+
+  background: url('../Images/row.png');
+  background-size: cover;
+
+  display: flex;
+  flex-flow: row nowrap;
+
+}
+
+.RowImage {
+  max-height: 200px;
+  min-height: 200px;
+  max-width: 300px;
+  min-width: 300px;
+  object-fit: contain;
+}
+
+.ImageName {
+  flex-grow: 1;
+  height: 200px;
+
+  font-family: adobestdb;
+  font-size: 2em;
+  color: #3d3d3d;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+
+  word-break: break-all;
+}
+
+.Control {
+  height: 200px;
+  width: 400px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ControlButtonUp {
+  height: 100px;
+  width: 100px;
+
+  background: url('../Images/Bigboard_situation_up.png');
+  background-size: cover;
+  border: none;
+
+  cursor: pointer;
+
+}
+
+.ControlButtonDown {
+  height: 100px;
+  width: 100px;
+
+  background: url('../Images/Bigboard_situation_Down.png');
+  background-size: cover;
+  border: none;
+
+  cursor: pointer;
+}

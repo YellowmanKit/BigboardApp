@@ -1,0 +1,39 @@
+
+.Header {
+  width: 100%;
+  height: 90px;
+  background-color: #af1f28;
+  display: flex;
+  justify-content: center;
+}
+
+.TitleArea {
+  width: 75%;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.title {
+  font-family: adobestdb;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  margin-left: 15px;
+}
+
+.topRightButton {
+  width: 90px;
+  height: 90px;
+  background-image: url('./Images/back_btn.png');
+  background-size:contain;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: 0;
+
+  cursor: pointer;
+}
