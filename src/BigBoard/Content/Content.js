@@ -24,7 +24,8 @@ class Content extends Component {
       timeOption:['1秒','2秒','5秒','10秒','20秒'],
       timeOptionType: 0,
 
-      filesToUpload: []
+      filesToUpload: [],
+      nameOfFilesToDelete: []
     }
 
     this.getAppState();
@@ -157,12 +158,23 @@ class Content extends Component {
 
   onRemoveImgBtnClicked(imgCell){
     this.props.checkFolderStatus.folderToCheck.imageCells.splice(this.props.checkFolderStatus.folderToCheck.imageCells.indexOf(imgCell),1);
-    axios.get(this.props.apiServer + 'delete/' + imgCell.name);
+    var _nameOfFilesToDelete = this.state.nameOfFilesToDelete;
+    _nameOfFilesToDelete.splice(0,0,imgCell.name);
+    this.setState({
+      nameOfFilesToDelete: _nameOfFilesToDelete
+    });
+    console.log(this.state.nameOfFilesToDelete);
+    //axios.get(this.props.apiServer + 'delete/' + imgCell.name);
     this.forceUpdate();
   }
 
   onUploadButtonPressed(){
-    this.props.onUploadButtonPressed(this.state.bigboard,this.state.appName,this.state.filesToUpload,this.state.timeOptionType);
+    this.props.onUploadButtonPressed(
+      this.state.bigboard,
+      this.state.appName,
+      this.state.filesToUpload,
+      this.state.nameOfFilesToDelete,
+      this.state.timeOptionType);
   }
 
   render() {

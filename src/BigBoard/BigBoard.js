@@ -39,7 +39,8 @@ class BigBoard extends Component {
       timeOptionTypeToUpload: 0,
       appName: '',
       jsonToUpload: {},
-      filesToUpload: []
+      filesToUpload: [],
+      nameOfFilesToDelete: []
 
     }
   }
@@ -162,10 +163,18 @@ class BigBoard extends Component {
         error: true
       });
       console.log("Failed to upload file",err);
+    });
+
+    this.state.nameOfFilesToDelete.map(item=>{
+      axios.get(apiServer + 'delete/' + item);
+      return null;
+    });
+    this.setState({
+      nameOfFilesToDelete: []
     })
   }
 
-  onUploadButtonPressed(_json,_appName,_filesToUpload,_timeOptionType){
+  onUploadButtonPressed(_json,_appName,_filesToUpload,_nameOfFilesToDelete,_timeOptionType){
     console.log(_json);
     this.setState({
       modalStatus: 'waitForConfirm',
@@ -173,7 +182,8 @@ class BigBoard extends Component {
       timeOptionTypeToUpload: _timeOptionType,
       appName: _appName,
       jsonToUpload: _json,
-      filesToUpload: _filesToUpload
+      filesToUpload: _filesToUpload,
+      nameOfFilesToDelete: _nameOfFilesToDelete
     })
   }
 
@@ -257,7 +267,7 @@ class BigBoard extends Component {
     this.state.catagory === 0? '':
     this.state.catagory === 1? '大壁報':
     this.state.catagory === 2? '回味影廊':
-    this.state.catagory === 3? '床邊小助手(院社資訊)':
+    this.state.catagory === 3? '床邊小助手(院舍資訊)':
     '';
 
     let titleBody =
